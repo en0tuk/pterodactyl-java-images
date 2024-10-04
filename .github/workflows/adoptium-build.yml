@@ -1,6 +1,17 @@
 name: Build Adoptium Image
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+    paths:
+    - "Adoptium/**"
+  pull_request:
+    branches:
+    - master
+    paths:
+    - "Adoptium/**"
 
 permissions:
   contents: write
