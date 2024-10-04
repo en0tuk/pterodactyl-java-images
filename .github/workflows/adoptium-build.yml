@@ -4,14 +4,16 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - master
+    - main
     paths:
     - "Adoptium/**"
+    - ".github/workflows/adoptium-build.yml"
   pull_request:
     branches:
-    - master
+    - main
     paths:
     - "Adoptium/**"
+    - ".github/workflows/adoptium-build.yml"
 
 permissions:
   contents: write
